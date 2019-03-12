@@ -5,11 +5,9 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle
+  NavItem
 } from "reactstrap";
+import { Link } from "react-router-dom";
 import Modal from "./modal";
 export default class navbar extends Component {
   constructor(props) {
@@ -29,15 +27,15 @@ export default class navbar extends Component {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">reactstrap</NavbarBrand>
+          <Link to="/">reactstrap</Link>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/">Beranda</NavLink>
+                <Link to="/daftar_event">Beranda</Link>
               </NavItem>
               <NavItem>
-                <NavLink href="/">Event Kajian</NavLink>
+                <Link to="/detail_event">Event Kajian</Link>
               </NavItem>
             </Nav>
           </Collapse>

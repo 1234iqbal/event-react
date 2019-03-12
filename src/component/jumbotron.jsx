@@ -1,23 +1,25 @@
 import React, { Component } from "react";
-import { Jumbotron, Button } from "reactstrap";
+import { Jumbotron, Button, Form, FormGroup, Label, Input } from "reactstrap";
 export default class jumbotron extends Component {
   render() {
     return (
       <div>
-        <Jumbotron className="bg_jumbotron">
-          <h1 className="display-3">Hello, world!</h1>
-          <p className="lead">
-            This is a simple hero unit, a simple Jumbotron-style component for
-            calling extra attention to featured content or information.
-          </p>
-          <hr className="my-2" />
-          <p>
-            It uses utility classes for typography and spacing to space content
-            out within the larger container.
-          </p>
-          <p className="lead">
-            <Button color="primary">Learn More</Button>
-          </p>
+        <Jumbotron className="bg_jumbotron text-center">
+          <div className="header-jumbotron">{this.props.data}</div>
+          <div className="col-sm-12 col-md-6 offset-md-3">
+            <Form inline>
+              <FormGroup>
+                <Input
+                  type="email"
+                  name="email"
+                  width="100%"
+                  id="exampleEmail"
+                  placeholder="something@idk.cool"
+                />
+                <Button color="primary">Learn More</Button>
+              </FormGroup>
+            </Form>
+          </div>
         </Jumbotron>
       </div>
     );

@@ -5,11 +5,14 @@ import CardKategori from "../component/cardKategori";
 import Footer from "../component/footer";
 import "../asset/main.css";
 export default class landingPage extends Component {
+  state = {
+    name: "Event Kajian Koding Semuanya ada Disini"
+  };
   render() {
     return (
       <div>
         <Navbar />
-        <Jumbotron />
+        <Jumbotron data={this.state.name} />
         <CardKategori />
         <Footer />
       </div>
