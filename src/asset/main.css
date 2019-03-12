@@ -1,0 +1,12 @@
+.bg_jumbotron {
+  background-image: url(https://www.dicoding.com/images/original/commons/header.jpg);
+  background-size: cover;
+  height: 375px;
+}
+
+.bg_footer {
+  color: #fff;
+  background: #1e3a56 url(https://www.arkademy.com/asset/v4/img/footer.svg);
+  padding-top: 20px;
+  padding-bottom: 80px;
+}
