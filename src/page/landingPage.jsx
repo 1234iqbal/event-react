@@ -6,13 +6,14 @@ import Footer from "../component/footer";
 import "../asset/main.css";
 export default class landingPage extends Component {
   state = {
-    name: "Event Kajian Koding Semuanya ada Disini"
+    name: "Silahkan Cari Sendiri Kopi yang Kamu Suka wkwkwk",
+    image: "bg_jumbotron_landing"
   };
   render() {
     return (
       <div>
         <Navbar />
-        <Jumbotron data={this.state.name} />
+        <Jumbotron data={this.state.name} image={this.state.image} />
         <CardKategori />
         <Footer />
       </div>

@@ -6,13 +6,14 @@ import Card from "../component/card";
 import { Container, Row, Col } from "reactstrap";
 export default class daftarEvent extends Component {
   state = {
-    name: "Event Kajian Koding Semuanya ada Disini"
+    name: "Silahkan Cari Sendiri Kopi yang Kamu Suka wkwkwk",
+    image: "bg_jumbotron_landing"
   };
   render() {
     return (
       <div>
         <Navbar />
-        <Jumbotron data={this.state.name} />
+        <Jumbotron data={this.state.name} image={this.state.image} />
 
         <Container fluid className="pt-5 pb-5">
           <Row>

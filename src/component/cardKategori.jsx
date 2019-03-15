@@ -5,26 +5,30 @@ export default class cardKategori extends Component {
   render() {
     return (
       <div className="pb-5 pt-5">
-        <h2 className="text-center pb-5">Explore ketegori</h2>
+        <h2 className="text-center pb-4">
+          <b>Kategori Kopi</b>
+        </h2>
         <Container>
           <Row>
             <Col xs="6">
               <Link to="/daftar_event">
                 <div>
-                  <Card>
+                  <Card className="card-hover">
                     <Row>
                       <Col xs="5">
                         <CardImg
-                          height="100%"
-                          width="100%"
-                          src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180"
+                          height="120px"
+                          width="250px"
+                          src="http://www.balipost.com/wp-content/uploads/2017/04/balipostcom_doyan-kopi-ini-takaran-aman-dalam-sehari_01-696x464.jpg"
                           alt="Card image cap"
                         />
                       </Col>
                       <Col xs="7">
                         <CardBody>
-                          <div className="text-card">
-                            <b>Design UI / UX</b>
+                          <div className="text-type-kategori text-card">
+                            <h2>
+                              <b>Kopi Hitam</b>
+                            </h2>
                           </div>
                         </CardBody>
                       </Col>
@@ -37,20 +41,22 @@ export default class cardKategori extends Component {
             <Col xs="6">
               <Link to="/daftar_event">
                 <div>
-                  <Card>
+                  <Card className="card-hover">
                     <Row>
                       <Col xs="5">
                         <CardImg
-                          height="100%"
-                          width="100%"
-                          src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180"
+                          height="120px"
+                          width="250px"
+                          src="https://hellosehat.com/wp-content/uploads/2016/06/Dampak-Negatif-Susu.jpg"
                           alt="Card image cap"
                         />
                       </Col>
                       <Col xs="7">
                         <CardBody>
-                          <div className="text-card">
-                            <b>Programming</b>
+                          <div className="text-type-kategori text-card">
+                            <h2>
+                              <b>Kopi Susu</b>
+                            </h2>
                           </div>
                         </CardBody>
                       </Col>

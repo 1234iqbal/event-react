@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import {
   Collapse,
+  NavbarBrand,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
+  NavLink,
   NavItem
 } from "reactstrap";
 import { Link } from "react-router-dom";
@@ -27,15 +28,28 @@ export default class navbar extends Component {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <Link to="/">reactstrap</Link>
+          <Link to="/">
+            <NavbarBrand>
+              <img
+                src="http://www.tobystevens.co.uk/wp-content/uploads/2012/04/7.-SAMSUNG_COFFEE_CAFE_LOGO_GRAPHIC-960x960.jpg"
+                width="40px"
+                height="40px"
+              />
+              KOPIKU
+            </NavbarBrand>
+          </Link>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <Link to="/daftar_event">Beranda</Link>
+                <Link to="/daftar_event">
+                  <NavLink>Beranda</NavLink>
+                </Link>
               </NavItem>
               <NavItem>
-                <Link to="/detail_event">Event Kajian</Link>
+                <Link to="/detail_event">
+                  <NavLink>Daftar Kopi</NavLink>
+                </Link>
               </NavItem>
             </Nav>
           </Collapse>
