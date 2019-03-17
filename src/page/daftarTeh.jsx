@@ -13,7 +13,7 @@ export default class daftarTeh extends Component {
   };
 
   componentDidMount() {
-    axios.get("http://localhost:8000/api/teh/").then(res => {
+    axios.get("https://api-event-react.herokuapp.com/api/teh/").then(res => {
       console.log(res.data);
       const data = res.data;
       this.setState({ data });

@@ -13,7 +13,7 @@ export default class daftarSusu extends Component {
   };
 
   componentDidMount() {
-    axios.get("http://localhost:8000/api/susu/").then(res => {
+    axios.get("https://api-event-react.herokuapp.com/api/susu/").then(res => {
       console.log(res.data);
       const data = res.data;
       this.setState({ data });
