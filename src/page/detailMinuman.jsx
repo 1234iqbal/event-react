@@ -2,12 +2,13 @@ import React, { Component } from "react";
 import Navbar from "../component/navbar";
 import Footer from "../component/footer";
 import { Container, Row, Col } from "reactstrap";
+import Detail from "../component/detail";
 export default class detailEventId extends Component {
   render() {
     return (
       <div>
         <Navbar />
-        <Container fluid>
+        <Container className="pb-4">
           <h2> white Coffe </h2>
           <hr />
           <Row>
@@ -20,7 +21,9 @@ export default class detailEventId extends Component {
                 />
               </div>
             </Col>
-            <Col md="3">Nama Saya Arif dan ini adik saya rara</Col>
+            <Col md="4">
+              <Detail />
+            </Col>
           </Row>
         </Container>
 

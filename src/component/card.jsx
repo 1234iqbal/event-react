@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 export default class card extends Component {
   render() {
     return (
-      <Link to="/detail_event" className="link">
+      <Link to="/detail_minuman" className="link">
         <div>
           <Card className="card-hover">
             <CardImg
@@ -22,8 +22,12 @@ export default class card extends Component {
               alt="Card image cap"
             />
             <CardBody>
-              <CardTitle>{this.props.name}</CardTitle>
-              <CardText>{this.props.deskripsi}</CardText>
+              <CardTitle>
+                <strong>{this.props.name}</strong>
+              </CardTitle>
+              <CardText>
+                <small>{this.props.deskripsi}</small>
+              </CardText>
             </CardBody>
           </Card>
         </div>

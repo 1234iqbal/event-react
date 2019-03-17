@@ -13,7 +13,7 @@ export default class daftarKopi extends Component {
   };
 
   componentDidMount() {
-    axios.get("http://localhost:8000/api/").then(res => {
+    axios.get("http://localhost:8000/api/kopi/").then(res => {
       console.log(res.data);
       const data = res.data;
       this.setState({ data });

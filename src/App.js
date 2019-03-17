@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import landingPage from "./page/landingPage";
 import daftarKopi from "./page/daftarKopi";
-import detailEventId from "./page/detailEventId";
+import detailMinuman from "./page/detailMinuman";
 import daftarSusu from "./page/daftarSusu";
 import daftarTeh from "./page/daftarTeh";
 import allMinuman from "./page/allMinuman";
@@ -18,7 +18,7 @@ class App extends Component {
           <Route path="/daftar_Kopi" component={daftarKopi} />
           <Route path="/daftar_susu" component={daftarSusu} />
           <Route path="/daftar_teh" component={daftarTeh} />
-          <Route path="/detail_event" component={detailEventId} />
+          <Route path="/detail_minuman" component={detailMinuman} />
         </div>
       </Router>
     );
