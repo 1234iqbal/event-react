@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import Navbar from "../component/navbar";
-import Jumbotron from "../component/jumbotron";
 import Footer from "../component/footer";
-import Tabsbar from "../component/tabsbar";
 import { Container, Row, Col } from "reactstrap";
 export default class detailEventId extends Component {
   render() {

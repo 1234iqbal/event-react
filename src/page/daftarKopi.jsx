@@ -5,7 +5,8 @@ import Footer from "../component/footer";
 import Card from "../component/card";
 import { Container, Row, Col } from "reactstrap";
 import axios from "axios";
-export default class daftarEvent extends Component {
+
+export default class daftarKopi extends Component {
   state = {
     image: "bg_jumbotron_landing",
     data: []

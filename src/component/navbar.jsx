@@ -27,7 +27,7 @@ export default class navbar extends Component {
   render() {
     return (
       <div>
-        <Navbar color="light" light expand="md">
+        <Navbar light expand="md">
           <Link to="/">
             <NavbarBrand>
               <img
@@ -35,25 +35,25 @@ export default class navbar extends Component {
                 width="40px"
                 height="40px"
               />
-              KOPIKU
+              MINUMANKU
             </NavbarBrand>
           </Link>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <Link to="/daftar_event">
+                <Link to="/" className="link">
                   <NavLink>Beranda</NavLink>
                 </Link>
               </NavItem>
               <NavItem>
-                <Link to="/detail_event">
-                  <NavLink>Daftar Kopi</NavLink>
+                <Link to="/daftar_seluruh_minuman" className="link">
+                  <NavLink>Daftar Minuman</NavLink>
                 </Link>
               </NavItem>
             </Nav>
+            <Modal />
           </Collapse>
-          <Modal />
         </Navbar>
       </div>
     );
