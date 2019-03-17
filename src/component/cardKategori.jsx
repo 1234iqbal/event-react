@@ -11,7 +11,7 @@ export default class cardKategori extends Component {
         <Container>
           <Row>
             <Col xs="6">
-              <Link to="/daftar_event">
+              <Link to="/daftar_event" className="link">
                 <div>
                   <Card className="card-hover">
                     <Row>
@@ -39,7 +39,7 @@ export default class cardKategori extends Component {
             </Col>
 
             <Col xs="6">
-              <Link to="/daftar_event">
+              <Link to="/daftar_event" className="link">
                 <div>
                   <Card className="card-hover">
                     <Row>

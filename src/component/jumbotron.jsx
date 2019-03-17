@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Jumbotron, Button, Form, FormGroup, Input } from "reactstrap";
+import { Jumbotron } from "reactstrap";
 export default class jumbotron extends Component {
   render() {
     const image = this.props.image;
