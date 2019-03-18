@@ -28,7 +28,7 @@
 
 .bg_footer {
   color: #fff;
-  background: #1e3a56 url(https://www.arkademy.com/asset/v4/img/footer.svg);
+  background-image: url(https://www.arkademy.com/asset/v4/img/footer.svg);
   padding-top: 20px;
   padding-bottom: 80px;
 }

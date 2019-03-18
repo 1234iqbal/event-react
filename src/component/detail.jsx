@@ -11,11 +11,17 @@ import {
   Input
 } from "reactstrap";
 export default class detail extends Component {
+  state = {
+    jumlah: 0
+  };
   button() {
     alert(
-      "Silahkan tunggu dalam waktu kurang dari 5 menit pelayan akan datang"
+      "Silahkan tunggu dalam waktu kurang dari 5 menit, pelayan kami akan datang dan membawakan pesanan yang anda inginkan"
     );
   }
+  handleChange = e => {
+    this.setState({ jumlah: e.target.value });
+  };
 
   render() {
     return (
@@ -43,10 +49,11 @@ export default class detail extends Component {
               <Form>
                 <FormGroup>
                   <Input
-                    type="email"
-                    name="email"
-                    id="exampleEmail"
-                    placeholder="Masukan Email"
+                    type="jumlah"
+                    name="jumlah"
+                    id="examplejumlah"
+                    onChange={this.handleChange}
+                    placeholder="Silahkan Masukan jumlah"
                   />
                 </FormGroup>
               </Form>
@@ -55,7 +62,7 @@ export default class detail extends Component {
             <CardSubtitle>
               <strong>Total harga</strong>
             </CardSubtitle>
-            <CardText>Rp. 500.000</CardText>
+            <CardText>Rp. {this.props.harga * this.state.jumlah}</CardText>
 
             <Button
               className=""
