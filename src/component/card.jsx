@@ -5,6 +5,7 @@ export default class card extends Component {
   render() {
     return (
       <div>
+        <br />
         <Card className="card-hover">
           <CardImg
             top
