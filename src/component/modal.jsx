@@ -2,12 +2,11 @@ import React, { Component } from "react";
 import {
   Button,
   Modal,
-  ModalHeader,
   ModalBody,
   Form,
   FormGroup,
-  Label,
-  Input
+  Input,
+  Container
 } from "reactstrap";
 export default class modal extends Component {
   constructor(props) {
@@ -30,12 +29,19 @@ export default class modal extends Component {
         <Button outline color="primary" onClick={this.toggle}>
           Masuk / Daftar
         </Button>
-        <Modal
-          isOpen={this.state.modal}
-          toggle={this.toggle}
-          className={this.props.className}
-        >
-          <ModalBody>
+
+        <Modal isOpen={this.state.modal} toggle={this.toggle} className="pt-10">
+          <ModalBody className="pb-3">
+            <div className="text-center">
+              <img
+                src="http://www.tobystevens.co.uk/wp-content/uploads/2012/04/7.-SAMSUNG_COFFEE_CAFE_LOGO_GRAPHIC-960x960.jpg"
+                width="80px"
+                height="80px"
+              />
+            </div>
+            <h2 className="pb-4 text-center">
+              <strong>MINUMANKU</strong>
+            </h2>
             <Form>
               <FormGroup>
                 <Input
