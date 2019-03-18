@@ -1,9 +1,24 @@
 import React, { Component } from "react";
-import Navbar from "../component/navbar";
-import Footer from "../component/footer";
+import Navbar from "../../component/navbar";
+import Footer from "../../component/footer";
 import { Container, Row, Col } from "reactstrap";
-import Detail from "../component/detail";
-export default class detailEventId extends Component {
+import Detail from "../../component/detail";
+import axios from "axios";
+export default class detailKopi extends Component {
+  state = {
+    data: []
+  };
+  componentDidMount() {
+    axios
+      .get(
+        "https://api-event-react.herokuapp.com/api/kopi/" +
+          this.props.match.params.id
+      )
+      .then(res => {
+        const data = res.data;
+        this.setState({ data });
+      });
+  }
   render() {
     return (
       <div>
@@ -17,7 +32,8 @@ export default class detailEventId extends Component {
                 <iframe
                   width="100%"
                   height="500px"
-                  src="https://www.youtube.com/embed/V1kkeDYPWS8"
+                  src="https://www.youtube.com/embed/U5Po5UUpT9w"
+                  frameborder="0"
                 />
               </div>
             </Col>
