@@ -29,12 +29,12 @@ export default class detail extends Component {
             <CardSubtitle>
               <strong>Nama</strong>
             </CardSubtitle>
-            <CardText>jus jeruk</CardText>
+            <CardText>{this.props.nama}</CardText>
 
             <CardSubtitle>
               <strong>Harga</strong>
             </CardSubtitle>
-            <CardText>Rp. 500.000</CardText>
+            <CardText>Rp. {this.props.harga}</CardText>
 
             <CardSubtitle>
               <strong>Jumlah</strong>

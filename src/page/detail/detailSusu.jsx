@@ -24,7 +24,7 @@ export default class detailSusu extends Component {
       <div>
         <Navbar />
         <Container className="pb-4">
-          <h2> white Coffe </h2>
+          <h2> Susu Enak </h2>
           <hr />
           <Row>
             <Col md="8">
@@ -38,7 +38,10 @@ export default class detailSusu extends Component {
               </div>
             </Col>
             <Col md="4">
-              <Detail />
+              <Detail
+                nama={this.state.data.name}
+                harga={this.state.data.harga}
+              />
             </Col>
           </Row>
         </Container>
