@@ -1,16 +1,20 @@
 import React, { Component } from "react";
 import {
   Card,
-  CardImg,
   CardText,
   CardBody,
   CardTitle,
   CardSubtitle,
-  Button
+  Button,
+  Form,
+  FormGroup,
+  Input
 } from "reactstrap";
 export default class detail extends Component {
   button() {
-    alert("hello");
+    alert(
+      "Silahkan tunggu dalam waktu kurang dari 5 menit pelayan akan datang"
+    );
   }
 
   render() {
@@ -35,7 +39,18 @@ export default class detail extends Component {
             <CardSubtitle>
               <strong>Jumlah</strong>
             </CardSubtitle>
-            <CardText>2</CardText>
+            <CardText>
+              <Form>
+                <FormGroup>
+                  <Input
+                    type="email"
+                    name="email"
+                    id="exampleEmail"
+                    placeholder="Masukan Email"
+                  />
+                </FormGroup>
+              </Form>
+            </CardText>
 
             <CardSubtitle>
               <strong>Total harga</strong>

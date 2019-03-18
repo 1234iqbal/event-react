@@ -35,33 +35,30 @@ export default class modal extends Component {
           toggle={this.toggle}
           className={this.props.className}
         >
-          <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
           <ModalBody>
             <Form>
               <FormGroup>
-                <Label for="exampleEmail">Email</Label>
                 <Input
                   type="email"
                   name="email"
                   id="exampleEmail"
-                  placeholder="with a placeholder"
+                  placeholder="Masukan Email"
                 />
               </FormGroup>
               <FormGroup>
-                <Label for="examplePassword">Password</Label>
                 <Input
                   type="password"
                   name="password"
                   id="examplePassword"
-                  placeholder="password placeholder"
+                  placeholder="Masukan Password"
                 />
               </FormGroup>
-              <FormGroup check>
-                <Label check>
-                  <Input type="checkbox" /> Check me out
-                </Label>
-              </FormGroup>
-              <Button color="primary">Submit</Button>
+              <Button color="primary" block>
+                Login
+              </Button>
+              <Button color="success" block>
+                Lupa Password
+              </Button>
             </Form>
           </ModalBody>
         </Modal>
