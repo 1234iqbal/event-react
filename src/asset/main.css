@@ -5,6 +5,18 @@
   background-position: fixed;
 }
 
+.input-count {
+  resize: none;
+  width: 10px;
+  height: 10px;
+}
+
+.image-detail {
+  width: 100%;
+  height: 500px;
+  border-radius: 15px;
+}
+
 .text-type-kategori {
   color: black;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -34,6 +46,17 @@
   height: 500px;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+.card-pure-judul {
+  color: #7ea90f;
+  padding-top: 50px;
+  font-family: "BalooTamma-Regular";
+  font-size: 30px;
+}
+.card-pure {
+  font-family: "Impact";
+  padding-bottom: 50px;
 }
 
 .bg_footer {

@@ -33,12 +33,14 @@ export default class navbar extends Component {
         <Navbar light expand="md">
           <Link to="/">
             <NavbarBrand>
-              <img
-                src="http://www.tobystevens.co.uk/wp-content/uploads/2012/04/7.-SAMSUNG_COFFEE_CAFE_LOGO_GRAPHIC-960x960.jpg"
-                width="40px"
-                height="40px"
-              />
-              MINUMANKU
+              <div className="text">
+                <img
+                  src="http://www.tobystevens.co.uk/wp-content/uploads/2012/04/7.-SAMSUNG_COFFEE_CAFE_LOGO_GRAPHIC-960x960.jpg"
+                  width="40px"
+                  height="40px"
+                />
+                MINUMANKU
+              </div>
             </NavbarBrand>
           </Link>
           <Form inline>

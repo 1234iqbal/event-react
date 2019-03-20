@@ -6,8 +6,11 @@ import Detail from "../../component/web/detail";
 import axios from "axios";
 export default class detailKopi extends Component {
   state = {
-    data: []
+    data: [],
+    count: 0
   };
+
+  
   componentDidMount() {
     axios
       .get(
@@ -24,18 +27,11 @@ export default class detailKopi extends Component {
     return (
       <div>
         <Navbar />
-        <Container className="pb-4">
-          <h2> Kopi Enak </h2>
-          <hr />
+        <Container className="pb-4 pt-5">
           <Row>
             <Col md="8">
               <div>
-                <iframe
-                  width="100%"
-                  height="500px"
-                  src="https://www.youtube.com/embed/U5Po5UUpT9w"
-                  frameborder="0"
-                />
+                <img src={this.state.data.image} className="image-detail" />
               </div>
             </Col>
             <Col md="4">

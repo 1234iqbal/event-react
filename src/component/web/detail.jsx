@@ -8,11 +8,21 @@ import {
   Button,
   Form,
   FormGroup,
-  Input
+  Input,
+  Row,
+  Col
 } from "reactstrap";
+
 export default class detail extends Component {
   state = {
-    jumlah: 0
+    jumlah: 0,
+    count: 0
+  };
+  tambah = () => {
+    this.setState({ count: this.state.count + 1 });
+  };
+  kurang = () => {
+    this.setState({ count: this.state.count - 1 });
   };
   button() {
     alert(
@@ -29,7 +39,7 @@ export default class detail extends Component {
         <Card>
           <CardBody>
             <CardTitle>
-              <h3>Detail Minuman</h3>
+              <h3 className="text">Detail Minuman</h3>
               <hr />
             </CardTitle>
             <CardSubtitle>
@@ -46,16 +56,19 @@ export default class detail extends Component {
               <strong>Jumlah</strong>
             </CardSubtitle>
             <CardText>
-              <Form>
+              <Form inline>
+                <Button onClick={this.kurang}>-</Button>
                 <FormGroup>
                   <Input
-                    type="jumlah"
+                    className="input-count"
                     name="jumlah"
-                    id="examplejumlah"
                     onChange={this.handleChange}
-                    placeholder="Silahkan Masukan jumlah"
+                    placeholder="0"
+                    min="0"
+                    value={this.state.count}
                   />
                 </FormGroup>
+                <Button onClick={this.tambah}>+</Button>
               </Form>
             </CardText>
 
@@ -64,16 +77,30 @@ export default class detail extends Component {
             </CardSubtitle>
             <CardText>Rp. {this.props.harga * this.state.jumlah}</CardText>
 
-            <Button
-              className=""
-              color="info"
-              block
-              onClick={() => {
-                this.button();
-              }}
-            >
-              Pesan Sekarang
-            </Button>
+            <Row>
+              <Col md="6">
+                <Button
+                  color="success"
+                  block
+                  onClick={() => {
+                    this.button();
+                  }}
+                >
+                  Beli Sekarang
+                </Button>
+              </Col>
+              <Col md="6">
+                <Button
+                  color="success"
+                  block
+                  onClick={() => {
+                    this.button();
+                  }}
+                >
+                  Add Keranjang
+                </Button>
+              </Col>
+            </Row>
           </CardBody>
         </Card>
       </div>
