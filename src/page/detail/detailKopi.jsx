@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import Navbar from "../../component/navbar";
-import Footer from "../../component/footer";
+import Navbar from "../../component/web/navbar";
+import Footer from "../../component/web/footer";
 import { Container, Row, Col } from "reactstrap";
-import Detail from "../../component/detail";
+import Detail from "../../component/web/detail";
 import axios from "axios";
 export default class detailKopi extends Component {
   state = {

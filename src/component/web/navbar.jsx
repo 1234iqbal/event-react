@@ -6,7 +6,10 @@ import {
   NavbarToggler,
   Nav,
   NavLink,
-  NavItem
+  NavItem,
+  Form,
+  FormGroup,
+  Input
 } from "reactstrap";
 import { Link } from "react-router-dom";
 import Modal from "./modal";
@@ -27,7 +30,7 @@ export default class navbar extends Component {
   render() {
     return (
       <div>
-        <Navbar expand="md">
+        <Navbar light expand="md">
           <Link to="/">
             <NavbarBrand>
               <img
@@ -38,6 +41,16 @@ export default class navbar extends Component {
               MINUMANKU
             </NavbarBrand>
           </Link>
+          <Form inline>
+            <FormGroup className="mb-0 mr-sm-2 mb-sm-0">
+              <Input
+                type="email"
+                name="email"
+                id="exampleEmail"
+                placeholder="Cari Minuman.."
+              />
+            </FormGroup>
+          </Form>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>

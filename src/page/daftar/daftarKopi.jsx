@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import Navbar from "../../component/navbar";
-import Jumbotron from "../../component/jumbotron";
-import Footer from "../../component/footer";
-import Card from "../../component/card";
+import Navbar from "../../component/web/navbar";
+import Jumbotron from "../../component/web/jumbotron";
+import Footer from "../../component/web/footer";
+import Card from "../../component/web/card";
 import { Container, Row, Col } from "reactstrap";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -45,7 +45,6 @@ export default class daftarKopi extends Component {
             ))}
           </Row>
         </Container>
-
         <Footer />
       </div>
     );

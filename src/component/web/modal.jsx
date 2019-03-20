@@ -26,7 +26,7 @@ export default class modal extends Component {
   render() {
     return (
       <div>
-        <Button outline color="primary" onClick={this.toggle}>
+        <Button outline color="success" onClick={this.toggle}>
           Masuk / Daftar
         </Button>
 

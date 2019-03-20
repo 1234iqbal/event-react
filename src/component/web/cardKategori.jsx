@@ -5,8 +5,8 @@ export default class cardKategori extends Component {
   render() {
     return (
       <div className="pb-5 pt-5">
-        <h2 className="text-center pb-4">
-          <b>Silahkan Pilih Minuman Yang Kalian Sukai :</b>
+        <h2 className="text text-center pb-4">
+          <b>Silahkan Pilih Minuman Yang Kalian Sukai</b>
         </h2>
         <Container>
           <Row>
