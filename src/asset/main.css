@@ -75,11 +75,15 @@
 .pb-5 {
   padding-bottom: 50px;
 }
+
 .pt-10 {
   padding-top: 100px;
 }
-.-mgr-3 {
-  margin-right: -30px;
+.mgr-3 {
+  margin-right: 30px;
+}
+.mgl-3 {
+  margin-left: 30px;
 }
 
 .tb-3 {

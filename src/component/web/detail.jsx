@@ -57,25 +57,31 @@ export default class detail extends Component {
             </CardSubtitle>
             <CardText>
               <Form inline>
-                <Button onClick={this.kurang}>-</Button>
-                <FormGroup>
-                  <Input
+                <Button color="success" onClick={this.kurang}>
+                  -
+                </Button>
+                {/* <FormGroup>
+                   <Input
                     className="input-count"
                     name="jumlah"
                     onChange={this.handleChange}
                     placeholder="0"
                     min="0"
-                    value={this.state.count}
-                  />
-                </FormGroup>
-                <Button onClick={this.tambah}>+</Button>
+                  /> 
+                </FormGroup> */}
+                <div className="mgr-3 mgl-3 ">
+                  <h4 className="text">{this.state.count}</h4>
+                </div>
+                <Button color="success" onClick={this.tambah}>
+                  +
+                </Button>
               </Form>
             </CardText>
 
             <CardSubtitle>
               <strong>Total harga</strong>
             </CardSubtitle>
-            <CardText>Rp. {this.props.harga * this.state.jumlah}</CardText>
+            <CardText>Rp. {this.props.harga * this.state.count}</CardText>
 
             <Row>
               <Col md="6">
