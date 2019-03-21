@@ -12,8 +12,9 @@ import {
   Row,
   Col
 } from "reactstrap";
+import { Link } from "react-router-dom";
 
-export default class detail extends Component {
+export default class detailItems extends Component {
   state = {
     jumlah: 0,
     count: 0
@@ -24,11 +25,7 @@ export default class detail extends Component {
   kurang = () => {
     this.setState({ count: this.state.count - 1 });
   };
-  button() {
-    alert(
-      "Silahkan tunggu dalam waktu kurang dari 5 menit, pelayan kami akan datang dan membawakan pesanan yang anda inginkan"
-    );
-  }
+
   handleChange = e => {
     this.setState({ jumlah: e.target.value });
   };
@@ -60,15 +57,6 @@ export default class detail extends Component {
                 <Button color="success" onClick={this.kurang}>
                   -
                 </Button>
-                {/* <FormGroup>
-                   <Input
-                    className="input-count"
-                    name="jumlah"
-                    onChange={this.handleChange}
-                    placeholder="0"
-                    min="0"
-                  /> 
-                </FormGroup> */}
                 <div className="mgr-3 mgl-3 ">
                   <h4 className="text">{this.state.count}</h4>
                 </div>
@@ -85,26 +73,18 @@ export default class detail extends Component {
 
             <Row>
               <Col md="6">
-                <Button
-                  color="success"
-                  block
-                  onClick={() => {
-                    this.button();
-                  }}
-                >
-                  Beli Sekarang
-                </Button>
+                <Link to="/login" className="link">
+                  <Button color="success" block>
+                    Beli Sekarang
+                  </Button>
+                </Link>
               </Col>
               <Col md="6">
-                <Button
-                  color="success"
-                  block
-                  onClick={() => {
-                    this.button();
-                  }}
-                >
-                  Add Keranjang
-                </Button>
+                <Link to="/login" className="link">
+                  <Button color="success" block>
+                    Add Keranjang
+                  </Button>
+                </Link>
               </Col>
             </Row>
           </CardBody>

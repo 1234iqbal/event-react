@@ -2,15 +2,15 @@ import React, { Component } from "react";
 import Navbar from "../../component/web/navbar";
 import Footer from "../../component/web/footer";
 import { Container, Row, Col } from "reactstrap";
-import Detail from "../../component/web/detail";
+import Detail from "../../component/web/detail/detailItems";
 import axios from "axios";
+import Tabsbar from "../../component/web/tabsbar";
 export default class detailKopi extends Component {
   state = {
     data: [],
     count: 0
   };
 
-  
   componentDidMount() {
     axios
       .get(
@@ -42,7 +42,7 @@ export default class detailKopi extends Component {
             </Col>
           </Row>
         </Container>
-
+        <Tabsbar />
         <Footer />
       </div>
     );

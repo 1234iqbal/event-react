@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Navbar from "../../component/web/navbar";
 import Footer from "../../component/web/footer";
 import { Container, Row, Col } from "reactstrap";
-import Detail from "../../component/web/detail";
+import Detail from "../../component/web/detail/detailItems";
 import axios from "axios";
 export default class daftarTeh extends Component {
   state = {

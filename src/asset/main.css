@@ -54,6 +54,11 @@
   font-family: "BalooTamma-Regular";
   font-size: 30px;
 }
+
+.bg-light {
+  background-color: lightgray;
+}
+
 .card-pure {
   font-family: "Impact";
   padding-bottom: 50px;
@@ -62,7 +67,7 @@
 .bg_footer {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: black;
-  background: #7ea90f url(https://www.arkademy.com/asset/v4/img/footer.svg);
+  background: url(https://www.arkademy.com/asset/v4/img/footer.svg);
   padding-top: 20px;
   padding-bottom: 80px;
 }
@@ -75,7 +80,15 @@
 .pb-5 {
   padding-bottom: 50px;
 }
-
+.card-login {
+  box-shadow: 0px 0px 1px 2px #ebebeb;
+}
+.image-login {
+  padding-top: 50px;
+}
+.pb-8 {
+  padding-bottom: 80px;
+}
 .pt-10 {
   padding-top: 100px;
 }

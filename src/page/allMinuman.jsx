@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import Navbar from "../component/web/navbar";
 import Footer from "../component/web/footer";
 import { Container, Row, Col } from "reactstrap";
-import Detail from "../component/web/detail";
+import Detail from "../component/web/detail/detailItems";
 export default class detailEventId extends Component {
   render() {
     return (
-      <div>
+      <div className="bg-light">
         <Navbar />
         <Container className="pb-4">
           <h2> white Coffe </h2>

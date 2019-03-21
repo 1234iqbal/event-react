@@ -39,7 +39,7 @@ export default class tabsbar extends Component {
                   this.toggle("1");
                 }}
               >
-                Tab1
+                Deskripsi
               </NavLink>
             </NavItem>
             <NavItem>
@@ -53,11 +53,19 @@ export default class tabsbar extends Component {
               </NavLink>
             </NavItem>
           </Nav>
-          <TabContent activeTab={this.state.activeTab}>
+          <TabContent activeTab={this.state.activeTab} className="pb-8">
             <TabPane tabId="1">
               <Row>
-                <Col sm="12">
-                  <h4>Tab 1 Contents</h4>
+                <Col sm="12" className="pt-4">
+                  <div>
+                    Cokelat umumnya diberikan sebagai hadiah atau bingkisan pada
+                    hari raya. Dengan bentuk, corak, dan rasa yang unik, cokelat
+                    sering digunakan sebagai ungkapan terima kasih, simpati,
+                    atau perhatian bahkan sebagai pernyataan cinta. Cokelat juga
+                    telah menjadi salah satu rasa yang paling populer di dunia.
+                    Selain dikonsumsi paling umum dalam bentuk cokelat batangan,
+                    cokelat juga menjadi bahan minuman hangat dan dingin.
+                  </div>
                 </Col>
               </Row>
             </TabPane>

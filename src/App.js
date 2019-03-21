@@ -9,13 +9,18 @@ import daftarKopi from "./page/daftar/daftarKopi";
 import daftarSusu from "./page/daftar/daftarSusu";
 import daftarTeh from "./page/daftar/daftarTeh";
 import allMinuman from "./page/allMinuman";
-
+import login from "./page/login";
+import chart from "./page/chart";
+import searchItems from "./page/search/searchItems";
 class App extends Component {
   render() {
     return (
       <Router>
         <div>
           <Route path="/" exact component={landingPage} />
+          <Route path="/login" exact component={login} />
+          <Route path="/chart" exact component={chart} />
+          <Route path="/search" exact component={searchItems} />
           <Route path="/daftar_seluruh_minuman" exact component={allMinuman} />
           <Route path="/daftar_Kopi" exact component={daftarKopi} />
           <Route path="/daftar_susu" exact component={daftarSusu} />
