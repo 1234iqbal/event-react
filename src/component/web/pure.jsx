@@ -4,7 +4,7 @@ export default class pure extends Component {
   render() {
     return (
       <div className="pb-5 pt-5">
-        <Container>
+        <Container className="pb-8">
           <hr />
           <center className="pb-5 pt-5">
             <div className="text text-center">

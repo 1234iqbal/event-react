@@ -17,7 +17,7 @@ export default class detailChart extends Component {
         <Card>
           <CardBody>
             <CardTitle>
-              <h3 className="text">Detail Minuman</h3>
+              <h3 className="text">Detail Pembayaran</h3>
               <hr />
             </CardTitle>
             <Row>

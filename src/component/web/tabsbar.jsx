@@ -49,7 +49,7 @@ export default class tabsbar extends Component {
                   this.toggle("2");
                 }}
               >
-                Moar Tabs
+                Testimoni
               </NavLink>
             </NavItem>
           </Nav>
@@ -69,10 +69,16 @@ export default class tabsbar extends Component {
                 </Col>
               </Row>
             </TabPane>
-            <TabPane tabId="2">
+            <TabPane tabId="2" className="pt-4">
               <Row>
                 <Col sm="12">
-                  <h4>Tab 1 Contents</h4>
+                  <div>
+                    perfeeeecttttt...... sangaaaaattt sempurnaaa , sangaaaaattt
+                    sesuai pesanan . warna nya cantik2 , bahan asli lembut dan
+                    tebal , tidak terawang , sangat lebar dan sesuai pemakaian
+                    formal atau nonformal dan yg pasti sesuai menutup aurat
+                    jilbabnya .
+                  </div>
                 </Col>
               </Row>
             </TabPane>

@@ -73,7 +73,7 @@ export default class detailItems extends Component {
 
             <Row>
               <Col md="6">
-                <Link to="/login" className="link">
+                <Link to="/chart" className="link">
                   <Button color="success" block>
                     Beli Sekarang
                   </Button>
