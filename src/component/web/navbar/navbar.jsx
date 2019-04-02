@@ -115,7 +115,7 @@ class navbar extends Component {
             <Nav className="ml-auto" navbar>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
-                  Kategori
+                  Kategories
                 </DropdownToggle>
                 <DropdownMenu right>
                   {this.state.data.map(res => (
