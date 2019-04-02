@@ -39,7 +39,7 @@ class navbar extends Component {
       });
 
     const count = JSON.parse(localStorage.getItem("barang"));
-    this.setState({ count: count || 0 });
+    this.setState({ count: count || [] });
   }
 
   handleChange = e => {
