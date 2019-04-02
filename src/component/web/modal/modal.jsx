@@ -27,7 +27,7 @@ export default class modal extends Component {
     return (
       <div>
         <Button outline color="success" onClick={this.toggle}>
-          Masuk / Daftar
+          Masuk
         </Button>
 
         <Modal isOpen={this.state.modal} toggle={this.toggle} className="pt-10">

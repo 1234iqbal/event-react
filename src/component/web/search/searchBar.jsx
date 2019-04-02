@@ -9,15 +9,35 @@ import {
   Label,
   Input
 } from "reactstrap";
+import axios from "axios";
 export default class searchBar extends Component {
+  state = {
+    name: ""
+  };
+
+  handleChangeName = e => {
+    this.setState({ name: e.target.value });
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+    axios
+      .post("https://api-event-react.herokuapp.com/api/search/all/", {
+        name: this.state.name
+      })
+      .then(res => {
+        console.log(res);
+      });
+  };
+
   render() {
     return (
       <div>
-        <Form>
+        <Form onSubmit={this.handleSubmit}>
           <Card>
             <CardBody>
               <div>
-                <Button color="success" block>
+                <Button color="success" type="submit" block>
                   Cari
                 </Button>
               </div>
@@ -27,7 +47,12 @@ export default class searchBar extends Component {
                   <Label for="examplename">
                     <b>Name</b>
                   </Label>
-                  <Input type="name" name="name" placeholder="Name" />
+                  <Input
+                    type="name"
+                    name="name"
+                    onChange={this.handleChangeName}
+                    placeholder="Name"
+                  />
                 </FormGroup>
               </CardTitle>
               <CardTitle>
@@ -69,9 +94,9 @@ export default class searchBar extends Component {
                       <Input type="radio" name="radio1" /> TIKI
                     </Label>
                   </FormGroup>
-                  <FormGroup check disabled>
+                  <FormGroup check>
                     <Label check>
-                      <Input type="radio" name="radio1" disabled /> NANDA
+                      <Input type="radio" name="radio1" /> Nanda Mandiri
                     </Label>
                   </FormGroup>
                 </FormGroup>

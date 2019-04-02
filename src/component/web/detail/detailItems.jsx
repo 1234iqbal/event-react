@@ -17,7 +17,8 @@ import { Link } from "react-router-dom";
 export default class detailItems extends Component {
   state = {
     jumlah: 0,
-    count: 0
+    count: 1,
+    order: []
   };
   tambah = () => {
     this.setState({ count: this.state.count + 1 });
@@ -25,6 +26,23 @@ export default class detailItems extends Component {
   kurang = () => {
     this.setState({ count: this.state.count - 1 });
   };
+
+  checkout = () => {
+    const { count, order } = this.state;
+    const { nama, harga, image } = this.props;
+    order.push({ nama, harga, count, image });
+    this.setState({ order: order });
+    localStorage.setItem("barang", JSON.stringify(order));
+  };
+
+  componentDidMount() {
+    const data = localStorage.getItem("barang");
+    if (data) {
+      this.setState({ order: JSON.parse(data) });
+    } else {
+      this.setState({ order: [] });
+    }
+  }
 
   handleChange = e => {
     this.setState({ jumlah: e.target.value });
@@ -70,11 +88,11 @@ export default class detailItems extends Component {
               <strong>Total harga</strong>
             </CardSubtitle>
             <CardText>Rp. {this.props.harga * this.state.count}</CardText>
-
+            <hr />
             <Row>
-              <Col md="6">
+              <Col md="6" className="pb-3">
                 <Link to="/chart" className="link">
-                  <Button color="success" block>
+                  <Button color="success" onClick={this.checkout} block>
                     Beli Sekarang
                   </Button>
                 </Link>

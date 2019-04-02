@@ -67,7 +67,10 @@
 .bg_footer {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: black;
-  background: url(https://www.arkademy.com/asset/v4/img/footer.svg);
+  background: url(https://png.pngtree.com/thumb_back/fw800/back_pic/03/87/39/1657d20b5bc056e.jpg);
+  background-size: cover;
+  color: white;
+  font-weight: 250px;
   padding-top: 20px;
   padding-bottom: 80px;
 }

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Navbar from "../component/web/navbar";
-import Footer from "../component/web/footer";
+import Navbar from "../component/web/navbar/navbar";
+import Footer from "../component/web/footer/footer";
 import { Container, Row, Col } from "reactstrap";
 import Detail from "../component/web/detail/detailItems";
 export default class detailEventId extends Component {

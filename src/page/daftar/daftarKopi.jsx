@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import Navbar from "../../component/web/navbar";
-import Jumbotron from "../../component/web/jumbotron";
-import Footer from "../../component/web/footer";
-import Card from "../../component/web/card";
+import Navbar from "../../component/web/navbar/navbar";
+import Jumbotron from "../../component/web/jumbotron/jumbotron";
+import Footer from "../../component/web/footer/footer";
+import Card from "../../component/web/card/card";
 import { Container, Row, Col, FormGroup, Label, Input } from "reactstrap";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
-import SearchBar from "../../component/web/searchBar";
+import SearchBar from "../../component/web/search/searchBar";
 export default class daftarKopi extends Component {
   state = {
     image: "bg_jumbotron_landing",
@@ -28,12 +28,12 @@ export default class daftarKopi extends Component {
       <div>
         <Navbar />
         <Jumbotron image={this.state.image} />
-        <Container fluid>
+        <Container>
           <Row className="pb-5">
-            <Col md="2">
+            <Col md="3" className="pb-3">
               <SearchBar />
             </Col>
-            <Col md="10">
+            <Col md="9">
               <Row>
                 <Col md="9" />
                 <Col md="3">
@@ -50,7 +50,7 @@ export default class daftarKopi extends Component {
               <hr />
               <Row>
                 {this.state.data.map(data => (
-                  <Col md="3">
+                  <Col md="3" className="pb-3">
                     <Link to={"/detail_kopi/" + data.id} className="link">
                       <Card
                         name={data.name}

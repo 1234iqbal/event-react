@@ -1,50 +1,54 @@
 import React, { Component } from "react";
-import Navbar from "../../component/web/navbar";
-import Jumbotron from "../../component/web/jumbotron";
-import Footer from "../../component/web/footer";
-import Card from "../../component/web/card";
+import Navbar from "../../component/web/navbar/navbar";
+import Jumbotron from "../../component/web/jumbotron/jumbotron";
+import Footer from "../../component/web/footer/footer";
+import Card from "../../component/web/card/card";
 import { Container, Row, Col } from "reactstrap";
-import axios from "axios";
-import Loading from "../../component/web/loading";
+import SearchBar from "../../component/web/search/searchBar";
 import { Link } from "react-router-dom";
 
 export default class searchItems extends Component {
   state = {
     image: "bg_jumbotron_landing",
+    url: "kopi Mix",
     data: [],
     loading: true
   };
 
-  componentDidMount() {
-    axios.get("https://api-event-react.herokuapp.com/api/search/").then(res => {
-      const data = res.data;
-      this.setState({ data, loading: false });
-    });
-  }
+  componentDidMount() {}
   render() {
     return (
-      <div>
-        <Navbar />
-        <Jumbotron image={this.state.image} />
+      console.log(this.props.history.location.state.data),
+      (
+        <div>
+          <Navbar />
+          <Jumbotron image={this.state.image} />
 
-        <Container fluid className="pb-5 pt-5">
-          <Row>
-            <Loading data={this.state.loading} />
-            {this.state.data.map(data => (
-              <Col xs="3">
-                <Link to={"/detail_kopi/" + data.id} className="link">
-                  <Card
-                    name={data.name}
-                    image={data.image}
-                    deskripsi={data.deskripsi}
-                  />
-                </Link>
+          <Container className="pb-5 pt-5">
+            <Row>
+              <Col md="3" className="pb-3">
+                <SearchBar />
               </Col>
-            ))}
-          </Row>
-        </Container>
-        <Footer />
-      </div>
+              <Col md="9">
+                <Row>
+                  {this.props.history.location.state.data.map(data => (
+                    <Col xs="3">
+                      <Link to={"/detail_kopi/" + data.id} className="link">
+                        <Card
+                          name={data.name}
+                          image={data.image}
+                          deskripsi={data.deskripsi}
+                        />
+                      </Link>
+                    </Col>
+                  ))}
+                </Row>
+              </Col>
+            </Row>
+          </Container>
+          <Footer />
+        </div>
+      )
     );
   }
 }

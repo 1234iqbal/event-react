@@ -9,7 +9,7 @@ export default class pure extends Component {
           <center className="pb-5 pt-5">
             <div className="text text-center">
               <h2>
-                <b>BELANJAN MINUMAN ONLINE</b>
+                <b>BELANJA MINUMAN ONLINE</b>
               </h2>
             </div>
             <div>Kini kita bisa belanja minuman secara online</div>
