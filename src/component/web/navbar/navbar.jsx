@@ -107,7 +107,7 @@ class navbar extends Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Link to="/chart">
               <IconButton aria-label="Cart">
-                <Badge badgeContent="1" color="secondary">
+                <Badge badgeContent={this.state.count.length} color="secondary">
                   <ShoppingCartIcon />
                 </Badge>
               </IconButton>
