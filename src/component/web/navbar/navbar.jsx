@@ -37,8 +37,9 @@ class navbar extends Component {
         const data = res.data;
         this.setState({ data });
       });
+
     const count = JSON.parse(localStorage.getItem("barang"));
-    this.setState({ count });
+    this.setState({ count: count || 0 });
   }
 
   handleChange = e => {
